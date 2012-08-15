@@ -1,4 +1,5 @@
 #!/bin/bash
 # The logic to stop your application should be put in this script.
-kill `ps -ef | grep testrubyserver.rb | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+# save as .openshift/action_hooks/stop
+kill `ps -ef | grep clojure | grep -v "grep clojure" | awk '{ print $2 }'` >${OPENSHIFT_LOG_DIR}/stop.log 2>&1
 exit 0

@@ -12,5 +12,7 @@ export LEIN_JVM_OPTS=-Duser.home=$HOME
 
 cd $OPENSHIFT_REPO_DIR/diy/examplenoir
 
+$OPENSHIFT_REPO_DIR/bin/lein deps
+
 $OPENSHIFT_REPO_DIR/bin/lein run >${OPENSHIFT_LOG_DIR}/lein.log 2>&1 &
 disown

@@ -9,7 +9,7 @@ export PORT=$OPENSHIFT_INTERNAL_PORT
 export HOST=$OPENSHIFT_INTERNAL_IP
 export HOME=$OPENSHIFT_DATA_DIR/home
 export LEIN_JVM_OPTS=-Duser.home=$HOME
-
+ 
 cd $OPENSHIFT_REPO_DIR/diy/examplenoir
 
 $OPENSHIFT_REPO_DIR/bin/lein deps
